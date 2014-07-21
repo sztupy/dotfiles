@@ -1,3 +1,12 @@
+Note: this is my local .dotfiles repo based on YADR
+
+## What is changed from upstream?
+
+  * Revert to emacs/oh-my-zsh default style keymap bindings for zsh, as I couldn't really get used to the vi keymaps under zsh
+  * Add a `git ln` command for easy access to the old-style git log (if you need to check the notes)
+
+## Original README follows
+
      _     _           _
     | |   | |         | |
     | |___| |_____  __| | ____
@@ -9,6 +18,7 @@
     # Now with Prezto and Vundle!
 
     sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
+
 
 **Always be sure to run `rake update` after pulling to ensure plugins are updated**
 
