@@ -1,11 +1,13 @@
-Note: this is my local .dotfiles repo based on YADR
+    YADR@SztupY
+
+This is my local .dotfiles repo based on YADR
 
 ## What is changed from upstream?
 
   * Revert to emacs/oh-my-zsh default style keymap bindings for zsh, as I couldn't really get used to the vi keymaps under zsh
   * Add a `git ln` command for easy access to the old-style git log (if you need to check the notes)
 
-## Original README follows
+# Original README follows
 
      _     _           _
     | |   | |         | |
@@ -17,7 +19,7 @@ Note: this is my local .dotfiles repo based on YADR
     # Yet Another Dotfile Repo v1.1
     # Now with Prezto and Vundle!
 
-    sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
+    sh -c "`curl -fsSL https://raw.github.com/sztupy/dotfiles/master/install.sh`"
 
 
 **Always be sure to run `rake update` after pulling to ensure plugins are updated**
@@ -29,7 +31,6 @@ Note: this is my local .dotfiles repo based on YADR
   * The best bits of all the top dotfile repos, vim and zsh plugins curated in one place, into a simple and cohesive way of working.
   * More than 90 vim plugins, all under one roof, working together, each plugin researched and configured to be at its best, often with better shortcut keys.
   * Many zsh plugins, starting with the wonderful Prezto base, and adding a few niceties on top.
-  * All things are vimized: irb, postres command line, etc.
 
 ## Mailing List
 
@@ -46,14 +47,14 @@ Please use GitHub Issues for pull requests or bug reports only.
 To get started please run:
 
 ```bash
-sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
+sh -c "`curl -fsSL https://raw.github.com/sztupy/dotfiles/master/install.sh`"
 ```
 
 **Note:** YADR will automatically install all of its subcomponents. If you want to be asked
 about each one, use:
 
 ```bash
-sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`" -s ask
+sh -c "`curl -fsSL https://raw.github.com/sztupy/dotfiles/master/install.sh`" -s ask
 ```
 
 ## Wait, you're not done! Do this:
@@ -103,7 +104,7 @@ Think of Zsh as a more awesome bash without having to learn anything new.
 Automatic spell correction for your commands, syntax highlighting, and more.
 We've also provided lots of enhancements:
 
-* Vim mode and bash style `Ctrl-R` for reverse history finder
+* Emacs mode with bash style `Ctrl-R` for reverse history finder
 * `Ctrl-x,Ctrl-l` to insert output of last command
 * Fuzzy matching - if you mistype a directory name, tab completion will fix it
 * [fasd](https://github.com/clvv/fasd) integration - hit `z` and partial match for recently used directory. Tab completion enabled.
