@@ -47,6 +47,7 @@
 
   # log
   l = log --graph --date=short
+  ln = log --pretty=medium
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
   short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
   simple = log --pretty=format:\" * %s\"
