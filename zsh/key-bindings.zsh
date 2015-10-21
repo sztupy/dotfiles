@@ -81,4 +81,9 @@ bindkey '\C-x\C-e' edit-command-line
 #bindkey '^I' complete-word
 ## Fix weird sequence that rxvt produces
 #bindkey -s '^[[Z' '\t'
-#
+
+# Make numpad enter work
+bindkey -s "^[Op" "0"
+bindkey -s "^[Ol" "."
+bindkey -s "^[OM" "^M"
+

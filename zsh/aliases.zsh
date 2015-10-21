@@ -53,8 +53,13 @@ fi
 alias lsg='ll | grep'
 
 # Alias Editing
+TRAPHUP() {
+  source $yadr/zsh/aliases.zsh
+}
+
 alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
+alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 
 # vim using
 mvim --version > /dev/null 2>&1
@@ -89,6 +94,7 @@ alias gci='git ci'
 alias gco='git co'
 alias gcp='git cp'
 alias ga='git add -A'
+alias gap='git add -p'
 alias guns='git unstage'
 alias gunc='git uncommit'
 alias gm='git merge'
@@ -110,7 +116,9 @@ alias gfch='git fetch'
 alias gd='git diff'
 alias gb='git b'
 alias gbd='git b -D -w'
+# Staged and cached are the same thing
 alias gdc='git diff --cached -w'
+alias gds='git diff --staged -w'
 alias gpub='grb publish'
 alias gtr='grb track'
 alias gpl='git pull'
@@ -143,8 +151,12 @@ alias gz='tar -zcvf'
 
 # Ruby
 alias c='rails c' # Rails 3
-alias co='script/console --irb=pry' # Rails 2
-alias ts='thin start'
+alias co='script/console' # Rails 2
+alias cod='script/console --debugger'
+
+#If you want your thin to listen on a port for local VM development
+#export VM_IP=10.0.0.1 <-- your vm ip
+alias ts='thin start -a ${VM_IP:-127.0.0.1}'
 alias ms='mongrel_rails start'
 alias tfdl='tail -f log/development.log'
 alias tftl='tail -f log/test.log'
@@ -198,4 +210,4 @@ alias dbmd='spring rake db:migrate:down'
 alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
-alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
+alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
