@@ -114,5 +114,9 @@ set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
+" ================ Security ==========================
+set modelines=0
+set nomodeline
+
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
